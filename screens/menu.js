@@ -1,7 +1,8 @@
 import react from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,TouchableOpacity} from 'react-native';
-
+import Icon from 'react-native-vector-icons/AntDesign';
+import MIcon from 'react-native-vector-icons/FontAwesome5';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -20,13 +21,19 @@ const Menu = props => {
   return (
       <View style={styles.container}>
       <TouchableOpacity style={{...styles.button, backgroundColor:'#5F7ADB'}} onPress={()=>NaviCal(props)}>
-   <Text style={styles.buttonText} >Calculadora</Text>
+      <Text style={styles.buttonText} >Calculadora</Text>
+      <Text></Text>
+      <Icon style={styles.icono} name="calculator" size={40} />
    </TouchableOpacity>
    <TouchableOpacity style={{...styles.button2, backgroundColor:'#5F7ADB'}} onPress={()=>NaviCon(props)}>
    <Text style={styles.buttonText} >Conversor</Text>
+   <Text></Text>
+   <MIcon style={styles.icono} name="coins" size={40} />
    </TouchableOpacity>
    <TouchableOpacity style={{...styles.button3, backgroundColor:'#5F7ADB'}} onPress={()=>NaviTie(props)}>
    <Text style={styles.buttonText} >Tienda</Text>
+   <Text></Text>
+   <MIcon style={styles.icono} name="store" size={40} />
    </TouchableOpacity>
       </View>
   );
@@ -51,7 +58,7 @@ const styles = StyleSheet.create({
     borderRadius:10,
     paddingVertical: 15,
     marginVertical:10,
-    width: '90%'
+    width: '25%'
     
   },
   button2:{
@@ -59,7 +66,7 @@ const styles = StyleSheet.create({
     borderRadius:10,
     paddingVertical: 15,
     marginVertical:10,
-    width: '90%'
+    width: '25%'
     
   },
   button3:{
@@ -67,7 +74,7 @@ const styles = StyleSheet.create({
     borderRadius:10,
     paddingVertical: 15,
     marginVertical:10,
-    width: '90%'
+    width: '25%'
     
   },
   bki: {
@@ -82,4 +89,8 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontStyle: 'normal',
   },
+  icono:{
+    alignContent:'flex-start',
+    alignSelf:'center'
+  }
 });
