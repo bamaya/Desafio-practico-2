@@ -20,6 +20,8 @@ const Menu = props => {
  
   return (
       <View style={styles.container}>
+      <Text style={styles.title1}>Menú</Text>
+      <Text></Text>
       <TouchableOpacity style={{...styles.button, backgroundColor:'#5F7ADB'}} onPress={()=>NaviCal(props)}>
       <Text style={styles.buttonText} >Calculadora</Text>
       <Text></Text>
@@ -83,7 +85,7 @@ const styles = StyleSheet.create({
     width: 400,
   }, 
   title1: {
-    fontSize: 36,
+    fontSize: 50,
     textAlign: 'center',
 
     color: '#FFFFFF',
