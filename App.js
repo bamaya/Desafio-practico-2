@@ -12,9 +12,9 @@ export default function App() {
   return (
     <NavigationContainer>
 <Stack.Navigator initialRouteName = "Menu">
-  <Stack.Screen name="Calculadora" component={Calculadora} options={{headerShown:false}}/>
-  <Stack.Screen name="Conversor" component={Conversor} options={{headerShown:false}}/>
-  <Stack.Screen name="Tienda" component={Tienda} options={{headerShown:false}}/>
+  <Stack.Screen name="Calculadora" component={Calculadora} options={{headerShown:true}}/>
+  <Stack.Screen name="Conversor" component={Conversor} options={{headerShown:true}}/>
+  <Stack.Screen name="Tienda" component={Tienda} options={{headerShown:true}}/>
   <Stack.Screen name="Menu" component={Menu} options={{headerShown:false}}/>
 </Stack.Navigator>
     </NavigationContainer>
