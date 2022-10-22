@@ -9,14 +9,21 @@ const Calculadora = props => {
   const [currentNumber, setCurrentNumber] = useState('');
   const [lastNumber, setLastNumber] = useState('');
 
+  function factorial (n) {
+    var total = 1; 
+    for (i=1; i<=n; i++) {
+      total = total * i; 
+    }
+    return total; 
+  }
+
   function handleImput(buttonPressed) {
     console.log(buttonPressed);
     if (
       (buttonPressed === '+') |
       (buttonPressed === '-') |
       (buttonPressed === '*') |
-      (buttonPressed === '/') |
-      (buttonPressed === '!')
+      (buttonPressed === '/')
     ) {
       setCurrentNumber(currentNumber + ' ' + buttonPressed + ' ');
       return;
@@ -32,6 +39,10 @@ const Calculadora = props => {
       case '=':
         setLastNumber(currentNumber + ' = ');
         calculator();
+        return;
+      case '!':
+        setLastNumber(currentNumber + ' ! ');
+        factorial();
         return;
     }
 
