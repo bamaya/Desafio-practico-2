@@ -9,12 +9,11 @@ const Calculadora = props => {
   const [currentNumber, setCurrentNumber] = useState('');
   const [lastNumber, setLastNumber] = useState('');
 
-  function factorial (n) {
+  function factorial (currentNumber) {
     var total = 1; 
-    for (i=1; i<=n; i++) {
+    for (i=1; i<=currentNumber; i++) {
       total = total * i; 
     }
-    return total; 
   }
 
   function handleImput(buttonPressed) {
@@ -44,6 +43,9 @@ const Calculadora = props => {
         setLastNumber(currentNumber + ' ! ');
         factorial();
         return;
+      case 'Sqrt':
+        setCurrentNumber((Math.sqrt(currentNumber)));
+        return;
     }
 
     setCurrentNumber(currentNumber + buttonPressed);
@@ -67,13 +69,7 @@ const Calculadora = props => {
         return;
       case '/':
         setCurrentNumber((firstNumber / lastNumber).toString());
-        return;
-      case '!':
-        setCurrentNumber((firstNumber / 100).toString());
-        return;
-      case 'Sqrt':
-        setCurrentNumber((firstNumber * -1));
-        return;
+        return;  
     }
   }
   return (
