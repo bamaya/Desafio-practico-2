@@ -1,18 +1,60 @@
 import react from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View,TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign';
+import MIcon from 'react-native-vector-icons/FontAwesome5';
 
 
 
-const Conversor = props => {
+const Menuconvert = props => {
+    const NaviSalv = props => {
+        props.navigation.navigate('Colón Salvadoreño');
+      }
+      const NaviMex = props => {
+        props.navigation.navigate('Peso Mexicano');
+      }
+      const NaviEu = props => {
+        props.navigation.navigate('Euros');
+      }
+      const NaviLib = props => {
+        props.navigation.navigate('Libra Esterlina');
+      }
+      const NaviFranco = props => {
+        props.navigation.navigate('Franco Suizo');
+      }
+ 
   return (
       <View style={styles.container}>
-      <Text style={styles.title1}>Conversor</Text>
+        <Text></Text>
+      <TouchableOpacity style={{...styles.button, backgroundColor:'#5F7ADB'}} onPress={()=>NaviSalv(props)}>
+      <Text style={styles.buttonText} >Colón Salvadoreño</Text>
+      <Text></Text>
+      <MIcon style={styles.icono} name="coins" size={40} />
+   </TouchableOpacity>
+   <TouchableOpacity style={{...styles.button2, backgroundColor:'#5F7ADB'}} onPress={()=>NaviMex(props)}>
+   <Text style={styles.buttonText} >Peso Mexicano</Text>
+   <Text></Text>
+   <MIcon style={styles.icono} name="coins" size={40} />
+   </TouchableOpacity>
+   <TouchableOpacity style={{...styles.button3, backgroundColor:'#5F7ADB'}} onPress={()=>NaviEu(props)}>
+   <Text style={styles.buttonText} >Euros</Text>
+   <Text></Text>
+   <MIcon style={styles.icono} name="coins" size={40} />
+   </TouchableOpacity>
+   <TouchableOpacity style={{...styles.button3, backgroundColor:'#5F7ADB'}} onPress={()=>NaviLib(props)}>
+   <Text style={styles.buttonText} >Libra Esterlina</Text>
+   <Text></Text>
+   <MIcon style={styles.icono} name="coins" size={40} />
+   </TouchableOpacity>
+   <TouchableOpacity style={{...styles.button3, backgroundColor:'#5F7ADB'}} onPress={()=>NaviFranco(props)}>
+   <Text style={styles.buttonText} >Franco Suizo</Text>
+   <Text></Text>
+   <MIcon style={styles.icono} name="coins" size={40} />
+   </TouchableOpacity>
       </View>
   );
 }
 
-export default Conversor;
+export default Menuconvert;
 
 const styles = StyleSheet.create({
   container: {
@@ -21,16 +63,43 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  buttonText:{
+    textAlign:'center',
+    color:'#ffff',
+    fontSize:16,
+      },
+  button:{
+    alignSelf: 'center',
+    borderRadius:10,
+    paddingVertical: 15,
+    marginVertical:10,
+    width: '25%'
+    
+  },
+  button2:{
+    alignSelf: 'center',
+    borderRadius:10,
+    paddingVertical: 15,
+    marginVertical:10,
+    width: '25%'
+    
+  },
+  button3:{
+    alignSelf: 'center',
+    borderRadius:10,
+    paddingVertical: 15,
+    marginVertical:10,
+    width: '25%'
+    
+  },
   bki: {
     position: 'absolute',
     height: 845,
     width: 400,
   }, 
-  title1: {
-    fontSize: 36,
-    textAlign: 'center',
 
-    color: '#FFFFFF',
-    fontStyle: 'normal',
-  },
+  icono:{
+    alignContent:'flex-start',
+    alignSelf:'center'
+  }
 });
