@@ -1,6 +1,5 @@
 import react from 'react';
 import { StyleSheet, Text, View,TouchableOpacity} from 'react-native';
-import Icon from 'react-native-vector-icons/AntDesign';
 import MIcon from 'react-native-vector-icons/FontAwesome5';
 
 
@@ -24,28 +23,27 @@ const Menuconvert = props => {
  
   return (
       <View style={styles.container}>
-        <Text></Text>
       <TouchableOpacity style={{...styles.button, backgroundColor:'#5F7ADB'}} onPress={()=>NaviSalv(props)}>
       <Text style={styles.buttonText} >Colón Salvadoreño</Text>
       <Text></Text>
       <MIcon style={styles.icono} name="coins" size={40} />
    </TouchableOpacity>
-   <TouchableOpacity style={{...styles.button2, backgroundColor:'#5F7ADB'}} onPress={()=>NaviMex(props)}>
+   <TouchableOpacity style={{...styles.button, backgroundColor:'#5F7ADB'}} onPress={()=>NaviMex(props)}>
    <Text style={styles.buttonText} >Peso Mexicano</Text>
    <Text></Text>
    <MIcon style={styles.icono} name="coins" size={40} />
    </TouchableOpacity>
-   <TouchableOpacity style={{...styles.button3, backgroundColor:'#5F7ADB'}} onPress={()=>NaviEu(props)}>
+   <TouchableOpacity style={{...styles.button, backgroundColor:'#5F7ADB'}} onPress={()=>NaviEu(props)}>
    <Text style={styles.buttonText} >Euros</Text>
    <Text></Text>
    <MIcon style={styles.icono} name="coins" size={40} />
    </TouchableOpacity>
-   <TouchableOpacity style={{...styles.button3, backgroundColor:'#5F7ADB'}} onPress={()=>NaviLib(props)}>
+   <TouchableOpacity style={{...styles.button, backgroundColor:'#5F7ADB'}} onPress={()=>NaviLib(props)}>
    <Text style={styles.buttonText} >Libra Esterlina</Text>
    <Text></Text>
    <MIcon style={styles.icono} name="coins" size={40} />
    </TouchableOpacity>
-   <TouchableOpacity style={{...styles.button3, backgroundColor:'#5F7ADB'}} onPress={()=>NaviFranco(props)}>
+   <TouchableOpacity style={{...styles.button, backgroundColor:'#5F7ADB'}} onPress={()=>NaviFranco(props)}>
    <Text style={styles.buttonText} >Franco Suizo</Text>
    <Text></Text>
    <MIcon style={styles.icono} name="coins" size={40} />
@@ -76,27 +74,6 @@ const styles = StyleSheet.create({
     width: '25%'
     
   },
-  button2:{
-    alignSelf: 'center',
-    borderRadius:10,
-    paddingVertical: 15,
-    marginVertical:10,
-    width: '25%'
-    
-  },
-  button3:{
-    alignSelf: 'center',
-    borderRadius:10,
-    paddingVertical: 15,
-    marginVertical:10,
-    width: '25%'
-    
-  },
-  bki: {
-    position: 'absolute',
-    height: 845,
-    width: 400,
-  }, 
 
   icono:{
     alignContent:'flex-start',
