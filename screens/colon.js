@@ -21,7 +21,7 @@ const v = Dolar * 8.75
       onChange={(e) => setDolar(e.nativeEvent.text)}
       />
       <Text style={styles.label}>Valor en colones</Text>
-      <TextInput style={styles.input}> ¢{r}</TextInput>
+      <TextInput style={styles.input}> ¢{r.toFixed(2)}</TextInput>
 
       </View>
   );

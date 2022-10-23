@@ -10,6 +10,7 @@ const Peso = props => {
   const [Dolar, setDolar] = useState(null);
 const v = Dolar * 21.46
   const r = v
+  
   return (
       <View style={styles.container}>
       
@@ -20,8 +21,8 @@ const v = Dolar * 21.46
       keyboardType='numeric'
       onChange={(e) => setDolar(e.nativeEvent.text)}
       />
-      <Text style={styles.label}>Valor en euros</Text>
-      <TextInput style={styles.input}>{r} MXN</TextInput>
+      <Text style={styles.label}>Valor en Pesos Mexicanos</Text>
+      <TextInput style={styles.input}>{r.toFixed(2)} MXN</TextInput>
 
       </View>
   );
