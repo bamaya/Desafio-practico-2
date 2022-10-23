@@ -21,7 +21,7 @@ const v = Dolar * 0.78
       onChange={(e) => setDolar(e.nativeEvent.text)}
       />
       <Text style={styles.label}>Valor en Libra Esterlina</Text>
-      <TextInput style={styles.input}>{r}</TextInput>
+      <TextInput style={styles.input}> £{r}</TextInput>
 
       </View>
   );
