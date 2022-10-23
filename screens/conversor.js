@@ -4,7 +4,7 @@ import MIcon from 'react-native-vector-icons/FontAwesome5';
 
 
 
-const Menuconvert = props => {
+const Conversor = props => {
     const NaviSalv = props => {
         props.navigation.navigate('Colón Salvadoreño');
       }
@@ -52,7 +52,7 @@ const Menuconvert = props => {
   );
 }
 
-export default Menuconvert;
+export default Conversor;
 
 const styles = StyleSheet.create({
   container: {
